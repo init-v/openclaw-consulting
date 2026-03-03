@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OpenClaw Consulting</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="bg-grid"></div>
+    <div class="page-shell">
+      <header class="top-nav">
+        <div class="brand-wrap">
+          <div class="brand-mark" aria-hidden="true"></div>
+          <p class="brand">OPENCLAW</p>
+        </div>
+
+        <nav class="main-nav" aria-label="Main navigation">
+          <a href="#services" data-i18n="navServices">Services</a>
+          <a href="#results" data-i18n="navResults">Results</a>
+          <a href="#about" data-i18n="navAbout">About</a>
+        </nav>
+
+        <div class="actions-wrap">
+          <button id="langToggle" class="lang-toggle" aria-label="Switch language">FR</button>
+          <a href="#contact" class="cta cta-outline" data-i18n="navContact">Get in Touch</a>
+        </div>
+      </header>
+
+      <main>
+        <section class="hero" id="about">
+          <div class="hero-copy">
+            <h1 data-i18n="heroTitle">Automate your business like a product, not a project.</h1>
+            <p data-i18n="heroSubtitle">
+              We help teams design, ship, and scale automation systems that compound operational
+              advantage.
+            </p>
+            <div class="hero-ctas">
+              <a href="#contact" class="cta cta-primary" data-i18n="heroPrimary">Build With OpenClaw</a>
+              <a href="#results" class="cta cta-outline" data-i18n="heroSecondary">View Case Studies</a>
+            </div>
+          </div>
+
+          <div class="hero-visual" aria-hidden="true">
+            <div class="prism prism-a"></div>
+            <div class="prism prism-b"></div>
+            <div class="prism prism-c"></div>
+            <div class="beam"></div>
+          </div>
+        </section>
+
+        <section class="value-cards" id="services">
+          <article class="card">
+            <p class="card-number">01</p>
+            <h2 data-i18n="card1Title">Audit</h2>
+            <p data-i18n="card1Text">We map your workflows and identify the highest ROI automations.</p>
+          </article>
+
+          <article class="card">
+            <p class="card-number">02</p>
+            <h2 data-i18n="card2Title">Architecture</h2>
+            <p data-i18n="card2Text">We design robust systems connected to your tools and business goals.</p>
+          </article>
+
+          <article class="card">
+            <p class="card-number">03</p>
+            <h2 data-i18n="card3Title">Leverage</h2>
+            <p data-i18n="card3Text">You move faster, reduce manual work, and scale with confidence.</p>
+          </article>
+        </section>
+
+        <section class="results" id="results">
+          <h3 data-i18n="resultsTitle">Recent Results</h3>
+          <div class="stats-grid">
+            <div class="stat">
+              <p class="stat-value">+38%</p>
+              <p class="stat-label" data-i18n="stat1">Onboarding Automation</p>
+            </div>
+            <div class="stat">
+              <p class="stat-value">-27%</p>
+              <p class="stat-label" data-i18n="stat2">Support Costs</p>
+            </div>
+            <div class="stat">
+              <p class="stat-value">2x</p>
+              <p class="stat-label" data-i18n="stat3">Feature Velocity</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="bottom-cta" id="contact">
+          <h2 data-i18n="finalTitle">Automate what matters most.</h2>
+          <a class="cta cta-primary" href="mailto:hello@openclaw.consulting" data-i18n="finalButton">Book a 30-minute consult</a>
+        </section>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
