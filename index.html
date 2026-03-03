@@ -3,19 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>OpenClaw Consulting</title>
+    <title>VERGE — Paris Automation Consultancy</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Rajdhani:wght@600;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="bg-grid"></div>
     <div class="page-shell">
-      <header class="top-nav">
+      <header class="site-header">
         <div class="brand-wrap">
           <svg class="brand-logo" viewBox="0 0 56 56" aria-hidden="true">
             <defs>
@@ -32,92 +31,190 @@
                 <stop offset="100%" stop-color="#0a1537" />
               </linearGradient>
             </defs>
-            <polygon points="7,8 32,23 24,52" fill="url(#logoLeft)"/>
-            <polygon points="24,52 37,24 32,23" fill="url(#logoCore)"/>
-            <polygon points="28,14 50,9 37,24" fill="url(#logoRight)"/>
-            <polygon points="37,24 50,9 31,6" fill="#d7deef"/>
-            <polygon points="26,49 37,24 41,26" fill="#2b63ec" opacity="0.65"/>
+            <polygon points="7,8 32,23 24,52" fill="url(#logoLeft)" />
+            <polygon points="24,52 37,24 32,23" fill="url(#logoCore)" />
+            <polygon points="28,14 50,9 37,24" fill="url(#logoRight)" />
+            <polygon points="37,24 50,9 31,6" fill="#d7deef" />
+            <polygon points="26,49 37,24 41,26" fill="#2b63ec" opacity="0.65" />
           </svg>
-          <p class="brand">VERGE</p>
+          <span class="brand">VERGE</span>
         </div>
 
-        <nav class="main-nav" aria-label="Main navigation">
-          <a href="#services" data-i18n="navServices">Services</a>
-          <a href="#results" data-i18n="navResults">Results</a>
-          <a href="#about" data-i18n="navAbout">About</a>
-        </nav>
+        <button id="menuToggle" class="menu-toggle" aria-expanded="false" aria-controls="mainNav" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
 
-        <div class="actions-wrap">
-          <button id="langToggle" class="lang-toggle" aria-label="Switch language">FR</button>
-          <a href="#contact" class="cta cta-outline" data-i18n="navContact">Get in Touch</a>
+        <div class="nav-wrap" id="mainNav">
+          <nav class="main-nav" aria-label="Main navigation">
+            <a href="#services" data-i18n="navServices">Services</a>
+            <a href="#use-cases" data-i18n="navUseCases">Use Cases</a>
+            <a href="#approach" data-i18n="navApproach">Approach</a>
+            <a href="#results" data-i18n="navResults">Results</a>
+            <a href="#about" data-i18n="navAbout">About</a>
+          </nav>
+
+          <div class="header-actions">
+            <div class="lang-switch" role="group" aria-label="Language selection">
+              <button class="lang-option" type="button" data-lang="fr" aria-label="Français">
+                <span class="flag" aria-hidden="true">🇫🇷</span><span>FR</span>
+              </button>
+              <button class="lang-option active" type="button" data-lang="en" aria-label="English">
+                <span class="flag" aria-hidden="true">🇬🇧</span><span>EN</span>
+              </button>
+            </div>
+            <a href="#contact" class="btn btn-primary" data-i18n="navCta">Get in touch</a>
+          </div>
         </div>
       </header>
 
       <main>
-        <section class="hero" id="about">
-          <div class="hero-copy">
-            <h1 data-i18n="heroTitle">Automate your business like a product, not a project.</h1>
-            <p data-i18n="heroSubtitle">
-              We help teams design, ship, and scale automation systems that compound operational
-              advantage.
+        <section class="hero" id="services">
+          <div>
+            <p class="eyebrow" data-i18n="heroEyebrow">Paris-based automation consultancy</p>
+            <h1 data-i18n="heroTitle">Automate the work that slows your team down.</h1>
+            <p class="lead" data-i18n="heroSubtitle">
+              We audit, build, and ship OpenClaw automations connected to your existing tools—so your team spends less time on manual operations.
             </p>
-            <div class="hero-ctas">
-              <a href="#contact" class="cta cta-primary" data-i18n="heroPrimary">Build With OpenClaw</a>
-              <a href="#results" class="cta cta-outline" data-i18n="heroSecondary">View Case Studies</a>
+            <div class="hero-cta-row">
+              <a href="#contact" class="btn btn-primary" data-i18n="heroPrimary">Book a 30-minute consult</a>
+              <a href="#use-cases" class="btn btn-secondary" data-i18n="heroSecondary">See automations we build</a>
             </div>
+            <ul class="proof-bullets">
+              <li data-i18n="proof1">2–4 week delivery</li>
+              <li data-i18n="proof2">Security-first implementation</li>
+              <li data-i18n="proof3">Works with your existing tools</li>
+            </ul>
           </div>
-
-          <div class="hero-visual" aria-hidden="true">
-            <div class="prism prism-a"></div>
-            <div class="prism prism-b"></div>
-            <div class="prism prism-c"></div>
-            <div class="beam"></div>
-          </div>
-        </section>
-
-        <section class="value-cards" id="services">
-          <article class="card">
-            <p class="card-number">01</p>
-            <h2 data-i18n="card1Title">Audit</h2>
-            <p data-i18n="card1Text">We map your workflows and identify the highest ROI automations.</p>
-          </article>
-
-          <article class="card">
-            <p class="card-number">02</p>
-            <h2 data-i18n="card2Title">Architecture</h2>
-            <p data-i18n="card2Text">We design robust systems connected to your tools and business goals.</p>
-          </article>
-
-          <article class="card">
-            <p class="card-number">03</p>
-            <h2 data-i18n="card3Title">Leverage</h2>
-            <p data-i18n="card3Text">You move faster, reduce manual work, and scale with confidence.</p>
-          </article>
-        </section>
-
-        <section class="results" id="results">
-          <h3 data-i18n="resultsTitle">Recent Results</h3>
-          <div class="stats-grid">
-            <div class="stat">
-              <p class="stat-value">+38%</p>
-              <p class="stat-label" data-i18n="stat1">Onboarding Automation</p>
-            </div>
-            <div class="stat">
-              <p class="stat-value">-27%</p>
-              <p class="stat-label" data-i18n="stat2">Support Costs</p>
-            </div>
-            <div class="stat">
-              <p class="stat-value">2x</p>
-              <p class="stat-label" data-i18n="stat3">Feature Velocity</p>
+          <div class="automation-map" aria-hidden="true">
+            <div class="node n1">Gmail</div>
+            <div class="node n2">HubSpot</div>
+            <div class="node n3">Notion</div>
+            <div class="node n4">Slack</div>
+            <div class="node n5">Sheets</div>
+            <div class="node n6">Stripe</div>
+            <svg viewBox="0 0 420 280" class="map-lines">
+              <path d="M38 56 L188 56 L188 138 L330 138" />
+              <path d="M78 234 L188 234 L188 138 L358 48" />
+              <path d="M78 56 L188 138 L338 234" />
+            </svg>
+            <div class="map-core">OpenClaw
+              <span data-i18n="heroMapSub">orchestration</span>
             </div>
           </div>
         </section>
 
-        <section class="bottom-cta" id="contact">
-          <h2 data-i18n="finalTitle">Automate what matters most.</h2>
-          <a class="cta cta-primary" href="mailto:hello@openclaw.consulting" data-i18n="finalButton">Book a 30-minute consult</a>
+        <section class="section" id="fit">
+          <h2 data-i18n="fitTitle">Who this is for</h2>
+          <div class="fit-grid">
+            <article class="panel">
+              <h3 data-i18n="fit1Title">Agencies</h3>
+              <p data-i18n="fit1Text">Client onboarding, content approvals, reporting packs.</p>
+            </article>
+            <article class="panel">
+              <h3 data-i18n="fit2Title">B2B Services</h3>
+              <p data-i18n="fit2Text">Lead qualification, handoffs, support triage workflows.</p>
+            </article>
+            <article class="panel">
+              <h3 data-i18n="fit3Title">E-commerce Ops</h3>
+              <p data-i18n="fit3Text">Order exceptions, refund routing, supplier coordination.</p>
+            </article>
+            <article class="panel">
+              <h3 data-i18n="fit4Title">Internal Ops Teams</h3>
+              <p data-i18n="fit4Text">Approvals, recurring reports, cross-team task orchestration.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="section" id="use-cases">
+          <h2 data-i18n="useCasesTitle">Use cases we implement</h2>
+          <div class="use-case-grid">
+            <article class="panel"><h3 data-i18n="uc1Title">Lead qualification + routing</h3><p data-i18n="uc1Text">Forms + Gmail + HubSpot + Slack routing with priority scoring.</p></article>
+            <article class="panel"><h3 data-i18n="uc2Title">Sales follow-ups + meeting prep</h3><p data-i18n="uc2Text">Auto drafts from CRM context in Gmail, Notion briefs before calls.</p></article>
+            <article class="panel"><h3 data-i18n="uc3Title">Onboarding automation</h3><p data-i18n="uc3Text">Welcome sequences, account setup checks, task creation in Notion/Asana.</p></article>
+            <article class="panel"><h3 data-i18n="uc4Title">Support triage + knowledge retrieval</h3><p data-i18n="uc4Text">Inbox triage, intent tagging, suggested replies from your documentation.</p></article>
+            <article class="panel"><h3 data-i18n="uc5Title">Invoicing + payment chasing</h3><p data-i18n="uc5Text">Stripe and accounting reminders, follow-ups, escalation logic.</p></article>
+            <article class="panel"><h3 data-i18n="uc6Title">Reporting dashboards + weekly exec summary</h3><p data-i18n="uc6Text">Pull data from Sheets, HubSpot, Stripe into one clear weekly brief.</p></article>
+            <article class="panel"><h3 data-i18n="uc7Title">Document processing (PDF/email to CRM)</h3><p data-i18n="uc7Text">Parse incoming docs, extract fields, update records with audit trail.</p></article>
+            <article class="panel"><h3 data-i18n="uc8Title">Internal approvals + task orchestration</h3><p data-i18n="uc8Text">Approval flows in Slack + Notion with clear owners and deadlines.</p></article>
+          </div>
+        </section>
+
+        <section class="section" id="approach">
+          <h2 data-i18n="approachTitle">How we work</h2>
+          <div class="timeline">
+            <article class="panel"><h3 data-i18n="ap1Title">1) Audit and ROI map (1–2 days)</h3><p data-i18n="ap1Text">Identify top 5 automations, estimate hours saved, map risk and dependencies.</p></article>
+            <article class="panel"><h3 data-i18n="ap2Title">2) Build and integrate (1–2 weeks)</h3><p data-i18n="ap2Text">OpenClaw workflows, connectors, logs, and exception handling in production.</p></article>
+            <article class="panel"><h3 data-i18n="ap3Title">3) Deploy and train (2–5 days)</h3><p data-i18n="ap3Text">Documentation, handoff sessions, monitoring setup, and ownership transfer.</p></article>
+          </div>
+          <div class="deliverables panel">
+            <h3 data-i18n="deliverablesTitle">Deliverables</h3>
+            <ul>
+              <li data-i18n="del1">Workflow diagrams</li>
+              <li data-i18n="del2">Prioritized automation backlog</li>
+              <li data-i18n="del3">Runbooks and incident procedures</li>
+              <li data-i18n="del4">Monitoring dashboard</li>
+              <li data-i18n="del5">Access management plan</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="section" id="results">
+          <h2 data-i18n="resultsTitle">Results (placeholders)</h2>
+          <div class="results-grid">
+            <article class="panel metric"><p class="metric-value">35%</p><p data-i18n="result1">Reduced manual ticket triage time (B2B services team).</p></article>
+            <article class="panel metric"><p class="metric-value">2h → 30m</p><p data-i18n="result2">Cut onboarding admin time per client (agency).</p></article>
+            <article class="panel metric"><p class="metric-value">6</p><p data-i18n="result3">Weekly reporting automated across six data sources (ops team).</p></article>
+          </div>
+          <blockquote class="panel quote" data-i18n="testimonial">
+            “The automations are reliable, documented, and actually used by the team.” — Operations Lead, Paris (placeholder)
+          </blockquote>
+        </section>
+
+        <section class="section" id="offer">
+          <h2 data-i18n="offerTitle">Engagement options</h2>
+          <div class="fit-grid">
+            <article class="panel"><h3 data-i18n="offer1Title">Sprint (fixed scope, 2 weeks)</h3><ul><li data-i18n="offer1a">1–3 production automations</li><li data-i18n="offer1b">Tool integrations + QA</li><li data-i18n="offer1c">Handoff and team training</li></ul></article>
+            <article class="panel"><h3 data-i18n="offer2Title">Build Retainer (monthly)</h3><ul><li data-i18n="offer2a">Continuous automation backlog delivery</li><li data-i18n="offer2b">Monitoring + optimization</li><li data-i18n="offer2c">Priority response for incidents</li></ul></article>
+            <article class="panel"><h3 data-i18n="offer3Title">Advisory (workshops + roadmap)</h3><ul><li data-i18n="offer3a">Ops review workshops</li><li data-i18n="offer3b">Automation roadmap by ROI</li><li data-i18n="offer3c">Internal capability coaching</li></ul></article>
+          </div>
+        </section>
+
+        <section class="section" id="about">
+          <h2 data-i18n="aboutTitle">About VERGE</h2>
+          <p class="lead" data-i18n="aboutText">Founder-led and Paris-based. We build pragmatic automation systems with reliability, monitoring, and documentation at the core. Bilingual FR/EN delivery.</p>
+          <div class="tools-strip panel" aria-label="Tools we work with">
+            <span>Gmail</span><span>Notion</span><span>HubSpot</span><span>Slack</span><span>Google Sheets</span><span>Stripe</span>
+          </div>
         </section>
       </main>
+
+      <footer class="site-footer" id="contact">
+        <div>
+          <h2 data-i18n="footerTitle">Let’s map your first automation sprint.</h2>
+          <p data-i18n="footerSubtitle">Tell us where your team loses time each week—we’ll propose a practical first build.</p>
+        </div>
+        <form class="contact-form panel" action="#" method="post">
+          <label for="email" data-i18n="formEmail">Work email</label>
+          <input id="email" name="email" type="email" placeholder="you@company.com" required />
+          <label for="message" data-i18n="formMessage">What should we automate first?</label>
+          <textarea id="message" name="message" rows="4" placeholder="Example: lead routing + onboarding handoff"></textarea>
+          <div class="form-actions">
+            <button class="btn btn-primary" type="submit" data-i18n="formSubmit">Send request</button>
+            <a class="btn btn-secondary" href="#" data-i18n="formCalendly">Book via Calendly (placeholder)</a>
+          </div>
+        </form>
+        <div class="footer-bottom">
+          <p>© VERGE</p>
+          <div class="lang-switch footer-lang" role="group" aria-label="Footer language selection">
+            <button class="lang-option" type="button" data-lang="fr" aria-label="Français">
+              <span class="flag" aria-hidden="true">🇫🇷</span><span>FR</span>
+            </button>
+            <button class="lang-option active" type="button" data-lang="en" aria-label="English">
+              <span class="flag" aria-hidden="true">🇬🇧</span><span>EN</span>
+            </button>
+          </div>
+        </div>
+      </footer>
     </div>
 
     <script src="script.js"></script>
